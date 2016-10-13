@@ -1,0 +1,31 @@
+{
+  "name": "fbSeen",
+  "short_name": "fbSeen",
+  "description": "",
+  "manifest_version": 2,
+  "version": "0.0.0",
+  "icons": { 
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "38": "icon_48.png"
+    },
+    "default_title": "Disable fbSeen"
+  },
+  "content_scripts": [ {
+    "js": ["jquery.js", "content.js"],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "*://*/*"
+  ]
+}
