@@ -32,9 +32,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 
 function getFbSeenEnabled(callback){
 	chrome.storage.local.get("fbSeenEnabled", function(items){
-		debugger
 		if(!chrome.runtime.error){
-			//debugger
 			if(items.fbSeenEnabled == true){
 				callback(true);
 			}
